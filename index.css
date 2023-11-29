@@ -42,7 +42,6 @@ body {
   background-color: #19a7ce;
 }
 .wrapper .icon-wrapper .icon:hover .icon-item:nth-child(1) {
-  transform: rotate(45deg);
   width: 24px;
 }
 .wrapper .icon-wrapper .icon:hover .icon-item:nth-child(2) {
@@ -51,7 +50,18 @@ body {
 }
 .wrapper .icon-wrapper .icon:hover .icon-item:nth-child(3) {
   width: 24px;
+}
+.wrapper .icon-wrapper .icon.rightArrow:hover .icon-item:nth-child(1) {
+  transform: rotate(45deg);
+}
+.wrapper .icon-wrapper .icon.rightArrow:hover .icon-item:nth-child(3) {
   transform: rotate(-45deg);
+}
+.wrapper .icon-wrapper .icon.leftArrow:hover .icon-item:nth-child(1) {
+  transform: rotate(135deg);
+}
+.wrapper .icon-wrapper .icon.leftArrow:hover .icon-item:nth-child(3) {
+  transform: rotate(-135deg);
 }
 
 /*# sourceMappingURL=index.css.map */

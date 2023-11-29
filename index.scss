@@ -21,6 +21,9 @@ $widthDelay: 0.5s;
 $animationTime: 0.75s;
 $animationType: ease;
 $rotateDelay: 1s;
+$animtionGap: 2px;
+$animationWidth: 24px;
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -57,20 +60,42 @@ body {
       }
 
       &:hover {
-        gap: 2px;
+        gap: $animtionGap;
         .icon-item {
           background-color: $turquoise;
           &:nth-child(1) {
-            transform: rotate(45deg);
-            width: 24px;
+            width: $animationWidth;
           }
           &:nth-child(2) {
             width: 0;
             height: 0;
           }
           &:nth-child(3) {
-            width: 24px;
-            transform: rotate(-45deg);
+            width: $animationWidth;
+          }
+        }
+      }
+      &.rightArrow {
+        &:hover {
+          .icon-item {
+            &:nth-child(1) {
+              transform: rotate(45deg);
+            }
+            &:nth-child(3) {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+      &.leftArrow {
+        &:hover {
+          .icon-item {
+            &:nth-child(1) {
+              transform: rotate(135deg);
+            }
+            &:nth-child(3) {
+              transform: rotate(-135deg);
+            }
           }
         }
       }
