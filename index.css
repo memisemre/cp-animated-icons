@@ -4,4 +4,54 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+}
+
+.wrapper .icon-wrapper {
+  display: flex;
+  gap: 64px;
+}
+.wrapper .icon-wrapper .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  min-height: 40px;
+  min-width: 48px;
+  transition: gap 0.75s ease 0.5s;
+}
+.wrapper .icon-wrapper .icon .icon-item {
+  width: 48px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #445069;
+  transition: background-color 0.75s ease, width 0.75s ease 0.5s, height 0.75s ease 0.5s, transform 0.75s ease 1s;
+}
+.wrapper .icon-wrapper .icon:hover {
+  gap: 2px;
+}
+.wrapper .icon-wrapper .icon:hover .icon-item {
+  background-color: #19a7ce;
+}
+.wrapper .icon-wrapper .icon:hover .icon-item:nth-child(1) {
+  transform: rotate(45deg);
+  width: 24px;
+}
+.wrapper .icon-wrapper .icon:hover .icon-item:nth-child(2) {
+  width: 0;
+  height: 0;
+}
+.wrapper .icon-wrapper .icon:hover .icon-item:nth-child(3) {
+  width: 24px;
+  transform: rotate(-45deg);
+}
+
 /*# sourceMappingURL=index.css.map */
